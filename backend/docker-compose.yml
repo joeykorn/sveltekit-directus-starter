@@ -1,10 +1,12 @@
 services:
   directus:
+    container_name: directus
     image: directus/directus:10.12.1
     ports:
       - 8055:8055
     volumes:
       - ./database:/directus/database
+      - ./snapshots:/directus/snapshots
       - ./uploads:/directus/uploads
       - ./extensions:/directus/extensions
     env_file:
