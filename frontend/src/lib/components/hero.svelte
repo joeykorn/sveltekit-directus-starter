@@ -1,29 +1,34 @@
 <script>
 	/** @type {string} */
-	export let heading;
+	export let headline;
 	/** @type {string} */
-	export let text;
-	/** @type {any} */
-	export let links;
+	export let title;
+	/** @type {string} */
+	export let content;
+	/** @type {{buttons: Array.<Object.<string, string>> }} button_group */
+	export let button_group;
 </script>
 
 <section>
-	{#if heading}
+	{#if title}
 		<h1>
-			{heading}
+			{title}
 		</h1>
 	{/if}
 
-	{#if text}
+	{#if headline}
+		<span>
+			{headline}
+		</span>
+	{/if}
+
+	{#if content}
 		<p>
-			{text}
+			{content}
 		</p>
 	{/if}
-	{#each links as link}
-		<div>
-			<a href={link.item.url}>
-				{link.item.text}
-			</a>
-		</div>
+
+	{#each button_group.buttons as button}
+		{button.label}
 	{/each}
 </section>

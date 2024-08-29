@@ -19,7 +19,7 @@ export async function load({ fetch, params }) {
 						'*',
 						{
 							item: {
-								block_hero: ['*', { links: ['*', { item: ['*'] }] }],
+								block_hero: ['*', { button_group: ['*', { buttons: ['*'] }] }],
 								block_logocloud: ['*', { logos: ['*', { directus_files_id: ['*'] }] }]
 							}
 						}
